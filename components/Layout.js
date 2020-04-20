@@ -10,8 +10,7 @@ const Layout = (props) => {
             <NavBar/>
             <Header/>
 
-            {name}
-            <a onClick={() => {setName("Ali")} }> a button </a>
+            {props.children}
             <Footer/>
         </div>
     )
