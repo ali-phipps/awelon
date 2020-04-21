@@ -17,7 +17,7 @@ const Home = () => (
   
   <div>
   <Layout>
-<Slider slides={images} />
+<Slider slides={images} autoPlay={2}  />
 
  </Layout>
 
