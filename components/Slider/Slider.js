@@ -29,15 +29,6 @@ const Slider = props => {
   const { activeSlide , translate, transition, _slides, imgWidth } = state
 
   useEffect(() => {
-    autoPlayRef.current = nextSlide
-    transitionRef.current = smoothTransition
-  })
-
-  useEffect(() => {
-    if (transition === 0) setState({ ...state, transition: 0.45 })
-  }, [transition])
-
-  useEffect(() => {
     const play = () => {
       autoPlayRef.current()
     }
@@ -45,6 +36,7 @@ const Slider = props => {
     const smooth = () => {
       transitionRef.current()
     }
+    
     setState({...state, imgWidth:window.innerWidth})
     const interval = setInterval(play, props.autoPlay * 1000)
     const transitionEnd = window.addEventListener('transitionend', smooth)
@@ -55,6 +47,17 @@ const Slider = props => {
       window.removeEventListener('resize', onResize)
     }
   }, [])
+
+  useEffect(() => {
+    autoPlayRef.current = nextSlide
+    transitionRef.current = smoothTransition
+  })
+
+  useEffect(() => {
+    if (transition === 0) setState({ ...state, transition: 0.45 })
+  }, [transition])
+
+
 
 
   const smoothTransition = () => {
@@ -94,8 +97,6 @@ setState({
       })
     
   }
-
-
 
 
   return (
