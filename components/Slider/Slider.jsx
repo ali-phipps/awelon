@@ -129,5 +129,6 @@ const SliderCSS = css`
   width: 100vw;
   margin: 0 auto;
   overflow: hidden;
+  z-index:1;
 `
 export default Slider

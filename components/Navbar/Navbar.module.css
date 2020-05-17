@@ -1,0 +1,44 @@
+.bar li {
+
+   float: left;
+}
+
+
+.bar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+    z-index:2;
+}
+
+
+.bar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 90px 80px 30px 30px;
+  text-decoration: none;
+  font-size: 30px;
+   text-transform: capitalize;
+   box-sizing: border-box;
+   
+}
+
+.bar li h1 {
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  max-width: 300px;
+}
+
+  
+.bar li a:hover {
+  background-color: #111;
+}
