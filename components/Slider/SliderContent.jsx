@@ -13,6 +13,7 @@ const SliderContent = props => (
     `}
   >
     {props.children}
+
   </div>
 )
 
